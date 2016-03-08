@@ -1,0 +1,24 @@
+{
+  "folders": [{
+    "path": ".",
+    "folder_exclude_patterns": [
+      "node_modules"
+    ],
+    "file_exclude_patterns": []
+  }],
+  "settings": {
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true,
+    "use_tab_stops": false
+  },
+  "build_systems": [{
+    "name": "C - Single File",
+    // "cmd" : ["gcc -Wall -O -std=c99 $file_name -o ${file_base_name} && ./${file_base_name}"],
+    // -g for debugging symbols
+    // "cmd" : ["clang -g -Wall -O -std=c99 $file_name -o ${file_base_name}"],
+    "cmd" : ["clang -Wall -O -std=c99 $file_name -o ${file_base_name}"],
+    "selector" : "source.c",
+    "shell": true,
+    "working_dir" : "$file_path"
+  }]
+}
